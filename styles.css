@@ -30,7 +30,7 @@ html {
   background-clip: text;
 }
 
-/* Hover */
+/* Hovering of the project cards */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -38,10 +38,6 @@ html {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar {
-  transition: width 1.5s ease-in-out;
 }
 
 .mobile-menu {

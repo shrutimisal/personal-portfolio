@@ -48,38 +48,13 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Progress bar animation
-const observerOptions = {
-  threshold: 0.5,
-};
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const progressBars = entry.target.querySelectorAll(".progress-bar");
-      progressBars.forEach((bar) => {
-        const width = bar.getAttribute("data-width");
-        setTimeout(() => {
-          bar.style.width = width;
-        }, 200);
-      });
-    }
-  });
-}, observerOptions);
-
-const skillsSection = document.querySelector("#skills");
-if (skillsSection) {
-  observer.observe(skillsSection);
-}
-
-// Form validation (basic)
+// Form validation
 const contactForm = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // Reset previous errors
   document.querySelectorAll(".text-red-500").forEach((error) => {
     error.classList.add("hidden");
   });
